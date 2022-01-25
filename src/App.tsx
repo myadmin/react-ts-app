@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import CustomTable from "./Components/CustomTable";
 import AudioPlayer from './Components/AudioPlayer';
+import PageNotFound from './Components/PageNotFound';
 import tracks from './tracks';
 import "./App.less";
 
@@ -14,6 +15,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<CustomTable />} />
                 <Route path="/music" element={<AudioPlayer tracks={tracks} />} />
+                <Route path="*" element={<PageNotFound />} />
             </Routes>
         </BrowserRouter>
     )

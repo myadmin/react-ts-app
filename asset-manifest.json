@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/github-actions-demo/static/css/main.aeebb933.css",
-    "main.js": "/github-actions-demo/static/js/main.0caf57db.js",
+    "main.css": "/github-actions-demo/static/css/main.545074bb.css",
+    "main.js": "/github-actions-demo/static/js/main.db23b345.js",
     "static/js/787.7d091d4f.chunk.js": "/github-actions-demo/static/js/787.7d091d4f.chunk.js",
+    "static/media/iwonder-dreamheaven.mp3": "/github-actions-demo/static/media/iwonder-dreamheaven.2fcbf12f96f7609a8711.mp3",
+    "static/media/cali-wataboi.mp3": "/github-actions-demo/static/media/cali-wataboi.a379b9b005a49b93e4cc.mp3",
+    "static/media/50-tobylane.mp3": "/github-actions-demo/static/media/50-tobylane.f1427f1de43648644b06.mp3",
+    "static/media/pause.svg": "/github-actions-demo/static/media/pause.5f148afe4a9c1b9dfc6826d48849623f.svg",
+    "static/media/prev.svg": "/github-actions-demo/static/media/prev.b70edbf6fc0e6e4fe8866dd64b5d0b4f.svg",
+    "static/media/next.svg": "/github-actions-demo/static/media/next.c294bc5fe21e17b40f8de7db6134ae5d.svg",
     "index.html": "/github-actions-demo/index.html",
-    "main.aeebb933.css.map": "/github-actions-demo/static/css/main.aeebb933.css.map",
-    "main.0caf57db.js.map": "/github-actions-demo/static/js/main.0caf57db.js.map",
+    "static/media/play.svg": "/github-actions-demo/static/media/play.5203c2723efd1c8cbf4b268a4d64bd0c.svg",
+    "main.545074bb.css.map": "/github-actions-demo/static/css/main.545074bb.css.map",
+    "main.db23b345.js.map": "/github-actions-demo/static/js/main.db23b345.js.map",
     "787.7d091d4f.chunk.js.map": "/github-actions-demo/static/js/787.7d091d4f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aeebb933.css",
-    "static/js/main.0caf57db.js"
+    "static/css/main.545074bb.css",
+    "static/js/main.db23b345.js"
   ]
 }

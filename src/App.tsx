@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import CustomTable from "./Components/CustomTable";
 import AudioPlayer from './Components/AudioPlayer';
 import PageNotFound from './Components/PageNotFound';
@@ -7,7 +7,7 @@ import "./App.less";
 
 const App = () => {
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter>
             <nav className="nav-top">
                 <Link to="/">Home</Link>
                 <Link to="/music">Music</Link>
@@ -17,7 +17,7 @@ const App = () => {
                 <Route path="/music" element={<AudioPlayer tracks={tracks} />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 };
 

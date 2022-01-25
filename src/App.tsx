@@ -7,7 +7,7 @@ import "./App.less";
 
 const App = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <nav className="nav-top">
                 <Link to="/">Home</Link>
                 <Link to="/music">Music</Link>

@@ -20,25 +20,27 @@ const Detail = () => {
     }
 
     return (
-        <List
-            style={{ padding: '20px' }}
-            grid={{ gutter: 20, column: 5 }}
-            loading={loading}
-            dataSource={data?.list}
-            pagination={{
-                total: data?.totalCount,
-                current: data?.page,
-                showSizeChanger: false,
-                onChange: handleChange
-            }}
-            renderItem={(item: any) => (
-                <List.Item>
-                    <Card>
-                        <Image width={'100%'} src={item?.imageUrl} />
-                    </Card>
-                </List.Item>
-            )}
-        />
+        <Image.PreviewGroup>
+            <List
+                style={{ padding: '20px' }}
+                grid={{ gutter: 20, column: 5 }}
+                loading={loading}
+                dataSource={data?.list}
+                pagination={{
+                    total: data?.totalCount,
+                    current: data?.page,
+                    showSizeChanger: false,
+                    onChange: handleChange
+                }}
+                renderItem={(item: any) => (
+                    <List.Item>
+                        <Card>
+                            <Image width={'100%'} src={item?.imageUrl} />
+                        </Card>
+                    </List.Item>
+                )}
+            />
+        </Image.PreviewGroup >
     )
 };
 

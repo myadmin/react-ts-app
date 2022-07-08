@@ -20,19 +20,22 @@ interface Props {
     pageSize: number;
 }
 
-const getTableData = ({ current, pageSize }: Props): Promise<Result> => {
-    let query = `page=${current}&size=${pageSize}`;
-
-    return fetch(`https://randomuser.me/api?results=55&${query}`)
-        .then((res) => res.json())
-        .then((res) => ({
-            total: res.info.results,
-            list: res.results,
-        }));
-};
-
 const CustomTable = () => {
-    const { tableProps } = useAntdTable(getTableData);
+    const { loading, tableProps } = useAntdTable(
+        async ({ current, pageSize }: Props): Promise<Result> => {
+            let query = `page=${current}&size=${pageSize}`;
+            return new Promise((resolve) => {
+                fetch(`https://randomuser.me/api?results=55&${query}`)
+                    .then((res) => res.json())
+                    .then((res) => {
+                        return resolve({
+                            total: res.info.results,
+                            list: res.results
+                        });
+                    });
+            });
+        },
+    );
 
     const columns = [
         {
@@ -64,6 +67,7 @@ const CustomTable = () => {
                     rowKey="email"
                     {...tableProps}
                     scroll={{ y: `calc(100vh - 136px)` }}
+                    loading={loading}
                 />
             </Col>
         </Row>

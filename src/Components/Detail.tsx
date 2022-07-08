@@ -7,17 +7,29 @@ const appKey = {
     app_secret: "ekNiWThUVUszOUxqU1BPb013cUNCQT09"
 };
 
+const instance = axios.create({
+    baseURL: 'https://www.mxnzp.com/api',
+    timeout: 1000,
+    headers: {
+        'Content-Type': 'application/json',
+    }
+});
+
 const Detail = () => {
     const { data, loading, run } = useRequest(async (page: number = 1) => {
-        const { data } = await axios.get(`https://www.mxnzp.com/api/image/girl/list?page=${page}&app_id=${appKey.app_id}&app_secret=${appKey.app_secret}`);
+        const { data } = await instance(`/image/girl/list`, {
+            params: {
+                page,
+                app_id: appKey.app_id,
+                app_secret: appKey.app_secret
+            }
+        });
         if (data.code) {
             return data.data;
         }
     });
 
-    const handleChange = (page: number) => {
-        run(page);
-    }
+    const handleChange = (page: number) => run(page);
 
     return (
         <Image.PreviewGroup>

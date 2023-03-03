@@ -10,9 +10,9 @@ const App = () => {
     return (
         <HashRouter>
             <nav className="nav-top">
-                <Link to="/">Home-111</Link>
-                <Link to="/music">Music-222</Link>
-                <Link to="/detail">Detail-333</Link>
+                <Link to="/">Home</Link>
+                <Link to="/music">Music</Link>
+                <Link to="/detail">Detail</Link>
             </nav>
             <Routes>
                 <Route path="/" element={<CustomTable />} />

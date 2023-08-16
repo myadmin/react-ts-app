@@ -47,7 +47,7 @@ const Detail = () => {
                 renderItem={(item: any) => (
                     <List.Item>
                         <Card>
-                            <Image width={'100%'} src={item?.imageUrl} />
+                            <Image width={'100%'} src={item?.imageUrl.replace('https', 'http')} />
                         </Card>
                     </List.Item>
                 )}
